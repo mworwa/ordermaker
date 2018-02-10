@@ -55,7 +55,7 @@ class DownloadDatabaseCommand extends Command
                     $body = $res->getBody();
                     $content = $body->getContents();
                     $dom = HtmlDomParser::str_get_html($content);
-                    sleep(6);
+                    sleep(10);
                     $bussinesCards = $this->getBussinesCards($dom);
                     foreach ($bussinesCards as $bussinesCard) {
                         $company = new Company();
